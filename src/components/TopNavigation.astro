@@ -1,0 +1,200 @@
+---
+// Supports weights 400-700
+---
+<header>
+<div class="container">
+  <img  class="logo" src="../logo.svg" alt="logo" />
+  </div>
+<nav>
+  <ul class="menu">
+    <li><a class="linje" href="/tickets/">INFO</a></li>
+    <li><a class="linje"href="/talks/">INFO</a></li>
+    <li><a class="linje"href="/about/">INFO</a></li>
+  </ul>
+   <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+</nav>
+</header>
+<style>
+
+  /* LOGO */
+ 
+   .container {
+  position: relative;
+
+
+}
+.logo {
+  display: block;
+  width: 240%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.container:hover .logo {
+  transform: scale(1.1);
+}
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; /* Add padding for better spacing */
+  }
+
+  .logo {
+    margin-right: 1rem; /* Adjust margin for spacing between logo and menu items */
+margin-left: 50px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 5rem; /* Adjust the gap between menu items */
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+    /* LINE STYLE - DESKTOP */
+   .linje {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+ font-family: "Arimo Variable", sans-serif;
+}
+
+a{
+    color: #0094D6;
+}
+a::before {
+  content: "";
+  display: block;
+  background-color: #0094D6;
+  height: 2px; /* Adjust this value for the underline thickness */
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+a:hover::before {
+  width: 100%;
+ 
+}
+/* burger menu */
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+.burger {
+  width: 36px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #0094D6;
+  margin-bottom: 5px;
+}
+.burger {
+  display: none;
+}
+
+
+  /* Media query for responsiveness */
+  @media screen and (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .logo {
+      margin-right: 0;
+      width: 40%;
+      margin-left: -1px;
+      
+}
+    ul {
+      flex-direction: column;
+      gap: 0.5rem; /* Adjust the gap between menu items in mobile view */
+    }
+    
+     .container {
+  position: relative;
+  width: 70% /* Adjust the width of the container as needed */
+
+}
+  }
+
+  /* menu */
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: rgba(187, 187, 187, 0.556);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+ 
+</style>
+<script>
+    const burger = document.querySelector(".burger");
+const nav = document.querySelector("nav");
+const menu = document.querySelector(".menu");
+const links = document.querySelectorAll(".menu li a");
+
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  nav.classList.toggle("active");
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    burger.classList.remove("active");
+    nav.classList.remove("active");
+  });
+});
+
+</script>

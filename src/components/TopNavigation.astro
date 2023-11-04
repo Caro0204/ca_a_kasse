@@ -7,9 +7,9 @@
   </div>
 <nav>
   <ul class="menu">
-    <li><a class="linje" href="/tickets/">INFO</a></li>
-    <li><a class="linje"href="/talks/">INFO</a></li>
-    <li><a class="linje"href="/about/">INFO</a></li>
+    <li><a class="linje" href="/">INFO</a></li>
+    <li><a class="linje"href="/">INFO</a></li>
+    <li><a class="linje"href="/">INFO</a></li>
   </ul>
    <div class="burger">
                 <div class="line"></div>
@@ -94,6 +94,7 @@ header {
 nav {
   display: flex;
   align-items: center;
+  
 }
 .burger {
   width: 36px;
@@ -160,13 +161,13 @@ nav {
 
   nav.active .menu {
     display: block;
-    background-color: rgba(187, 187, 187, 0.556);
+    background-color: rgba(187, 187, 187, 0.33);
     position: absolute;
     top: 60px;
     left: 0;
     width: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1;
+    border-top-left-radius: 40px;
   }
 
   nav.active .menu li {

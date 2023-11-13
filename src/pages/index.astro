@@ -18,17 +18,31 @@ import MainLayout from "../components//MainLayout.astro";
 	<div id="info">
 	</div>
 	<MainLayout>
-		<section id="kampagnevideo" class="cirkel_img">
+		<section id="kampagnevideo" class="overflow_img">
 			<h1>Your carrier - <br>our business</h1>
 			<img class="cirkel" src="/cirkel.svg" alt="cirkel">
 		</section>
 		 <a href="#target-section"><div class="arrow bouncing"></div></a>
-		<section id="target-section">
+		<section id="target-section" class="overflow_img">
+			<div></div>
+			<div>
 			<h2>It's a match!</h2>
 			<p>Det kan være svært at finde det perfekte match. <br> Er CA et match for dig?</p>
+			<img class="kogc_img" src="/img/billeder_kenneth_caro.webp" alt="billede af skuespiller sammen">
+			</div>
 		</section>
-		<section id="bliv_medlem">
+		<section id="bliv_medlem" class="overflow_img">
+			<h2 class="small">Måske</h2>
+			<h2>Vi er noget for dig?</h2>
+			<p>Læs mere om <a class="ca_link" href="https://www.ca.dk/?gclid=CjwKCAiA6byqBhAWEiwAnGCA4MxiuLU2CEMZGKZJt0VgO8_lOszWYDisDwnnFDiFkPHvchM9X8baeRoCuXQQAvD_BwE" target="_blank">CA</a> og se de forskellige fordele. </p>
+			<div class="caro_img" >
+			<img src="/img/billeder_caro.webp" alt="billede af skuespiller">
+			</div>
 			<img class="cirkel2" src="/cirkel.svg" alt="cirke2">
+			<div class="cirkel_tekst">
+			<h2 class="tilmeld">tilmeld dig nu</h2>
+			<p class="gave_t" >og få en gave</p>
+			</div>
 		</section>
 	</MainLayout>
 	
@@ -37,14 +51,27 @@ import MainLayout from "../components//MainLayout.astro";
 	
 </html>
 <style>
-/* FONTS */
+/*********** FONTS ***********/
 
 h1{
 	color: #0094D6;
 	font-family: Nexa light;
+	margin-left: 25px;
+}
+h2{
+font-family: Nexa bold;
+color: #D54141;
+margin-left: 9px;
+
+}
+.small{
+	font-size: 15px;
+	margin-bottom: -18px;
 }
 p{
 font-family: Open Sans, sans-serif;
+margin-left: 9px;
+color: #054674;
 }
 .arrow {
   width: 0;
@@ -84,8 +111,120 @@ html {
 	margin-left: 140px;
 	
 }
-.cirkel_img{
+.cirkel2{
+	display: grid;
+	width: 70%;
+	margin-left: 140px;
+	margin-top: 50px;
+}
+.cirkel_tekst{
+	margin-top: -200px;
+	margin-bottom: 200px;
+	margin-left: 250px;
+}
+.tilmeld{
+	color: #054674;
+	margin-bottom: -15px;
+	margin-top: 55px;
+	font-size: 22px;
+	margin-left: -70px; 
+}
+.gave_t{
+	margin-left: -60px;
+}
+.overflow_img{
 overflow: hidden;
 margin-right: -9px;
+margin-left: -9px;
+}
+.ca_link{
+	text-decoration: none;
+	cursor: pointer;
+	color:#054674
+}
+
+/*********** billeder ***********/
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.caro_img, .kogc_img{
+	width: 95%;
+}
+.kogc_img{
+	margin-left: 30px;
+}
+.caro_img{
+	margin-left: -5px;
+	position: absolute;
+}
+@media (min-width: 500px){
+	.cirkel{
+	width: 43%;
+    margin-left: 821px;
+    margin-top: -100px;
+	
+}
+.cirkel_img{
+overflow: revert;
+margin: 0;
+}
+h1{
+	margin-left:85px;
+	font-size: 2.5rem;
+}
+.cirkel2{
+	display: none;
+}
+.cirkel_tekst{
+	margin-top: -200px;
+	margin-bottom: 200px;
+	margin-left: 250px;
+}
+.tilmeld{
+	color: #054674;
+	margin-bottom: -15px;
+	margin-top: 55px;
+	font-size: 22px;
+	margin-left: -70px; 
+}
+.gave_t{
+	margin-left: -60px;
+}
+.caro_img{
+	width: 55%;
+}
+.kogc_img{
+	margin-bottom: 50px;
+	width: 100%;
+}
+.caro_img{
+	margin-left: -5px;
+	position: relative;
+}
+h2{
+font-family: Nexa bold;
+color: #D54141;
+margin-left: 9px;
+margin-left: 25px;
+font-size: 2rem;
+
+}
+.small{
+	font-size: 28px;
+    margin-bottom: -30px;
+    margin-left: 25px;
+}
+p{
+	margin-left: 25px;
+}
+#target-section{
+display: grid;
+grid-template-columns: 1fr 1fr;	
+	
+	
+}
+
 }
 </style>

@@ -21,7 +21,7 @@ import MainLayout from "../components//MainLayout.astro";
 		<section id="kampagnevideo" class="overflow_img">
 			<h1>Your carrier - <br>our business</h1>
 			<div class="instavideo">
-			 <video  width="100%" controls>
+			 <video id="insta" width="640" height="360" controls>
       <source src="../cainstavideo.webm" type="video/webm" />
        Your browser does not support the video tag.
     </video>
@@ -177,6 +177,15 @@ img {
 .kampagnevideo{
 	display: none;
 }
+.instavideo{
+	width: 200px;
+	height: 360px;
+	overflow: hidden;
+	display: block;
+}
+#insta{
+	margin-left: -220px;
+}
 @media (min-width: 500px){
 	.cirkel{
 	width: 43%;
@@ -249,7 +258,6 @@ grid-template-columns: 1fr 1fr;
 	display: none;
 	z-index: 1000;
 	position: absolute;
-	aspect-ratio: 9/16;
 }
 .kampagnevideo{
 	display:unset;

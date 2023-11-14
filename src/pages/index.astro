@@ -20,6 +20,18 @@ import MainLayout from "../components//MainLayout.astro";
 	<MainLayout>
 		<section id="kampagnevideo" class="overflow_img">
 			<h1>Your carrier - <br>our business</h1>
+			<div class="instavideo">
+			 <video  width="100%" controls>
+      <source src="../mov/ca-instavideo.webm" type="video/webm" />
+       Your browser does not support the video tag.
+    </video>
+	</div>
+	<div class="kampagnevideo">
+	 <video  width="100%" controls>
+      <source src="../mov/ca-kampagnevideo.webm" type="video/webm" />
+       Your browser does not support the video tag.
+    </video>
+	</div>
 			<img class="cirkel" src="/cirkel.svg" alt="cirkel">
 		</section>
 		 <a href="#target-section"><div class="arrow bouncing"></div></a>
@@ -67,6 +79,7 @@ margin-left: 9px;
 .small{
 	font-size: 15px;
 	margin-bottom: -18px;
+	margin-top: 50px;
 }
 p{
 font-family: Open Sans, sans-serif;
@@ -86,6 +99,7 @@ color: #054674;
 }
 html {
   scroll-behavior: smooth;
+  background-color: #E6E6DF;
 }
 
 .bouncing {
@@ -159,6 +173,10 @@ img {
 	margin-left: -5px;
 	position: absolute;
 }
+/****** Video ******/
+.kampagnevideo{
+	display: none;
+}
 @media (min-width: 500px){
 	.cirkel{
 	width: 43%;
@@ -169,6 +187,7 @@ img {
 .cirkel_img{
 overflow: revert;
 margin: 0;
+
 }
 h1{
 	margin-left:85px;
@@ -198,6 +217,7 @@ h1{
 .kogc_img{
 	margin-bottom: 50px;
 	width: 100%;
+	margin-left: 20px;
 }
 .caro_img{
 	margin-left: -5px;
@@ -221,10 +241,22 @@ p{
 }
 #target-section{
 display: grid;
-grid-template-columns: 1fr 1fr;	
-	
-	
+grid-template-columns: 1fr 1fr;		
 }
 
+/***** Video *****/
+.instavideo{
+	display: none;
+	z-index: 1000;
+	position: absolute;
+}
+.kampagnevideo{
+	display:unset;
+	z-index: 1000;
+	position: absolute;
+	max-width: 1000px;
+    margin: 0 auto;
+    margin-left: 88px;
+}
 }
 </style>

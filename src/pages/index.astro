@@ -36,7 +36,18 @@ import MainLayout from "../components//MainLayout.astro";
 		</section>
 		 <a href="#target-section"><div class="arrow bouncing"></div></a>
 		<section id="target-section" class="overflow_img">
-			<div></div>
+			<div class="liste">
+			<h2 class="forsik">Forsikringer</h2>
+			<div>
+				<ul>
+				<li><a href="https://www.ca.dk/a-kasse-og-dagpenge/"  target="_blank">A-kasse og dagpenge</a></li>
+				<li><a href="https://www.ca.dk/forsikringer/advokathjaelp/"  target="_blank">Advokathjælp</a></li>
+				<li><a href="https://www.ca.dk/forsikringer/lonsikring/"  target="_blank">Lønsikring</a></li>
+				<li><a href="https://www.ca.dk/forsikringer/privatforsikring/"  target="_blank">Privatforsikring</a></li>
+				<li><a href="https://www.ca.dk/forsikringer/studieforsikring/">Studieforsikring</a></li>
+				</ul>
+				</div>
+				</div>
 			<div>
 			<h2>Dit perfekte match venter - opdag CA</h2>
 			<p>Med CA får du en a-kasse, der bringer dig videre i karrieren. I CA får du udvikling og tryghed <br> - og den bedste medlemsservice i branchen.</p>
@@ -159,6 +170,11 @@ margin-left: -9px;
 	cursor: pointer;
 	color:#054674
 }
+.forsik{
+color: #054674;
+margin-bottom: -20px;
+margin-left: 55px;
+}
 
 /*********** billeder ***********/
 img {
@@ -189,6 +205,11 @@ img {
 #insta{
 	margin-left: -220px;
 	z-index: 1000;
+}
+
+/****** Liste ****/
+.liste{
+	display: none;
 }
 @media (min-width: 500px){
 	.cirkel{
@@ -271,5 +292,37 @@ grid-template-columns: 1fr 1fr;
     margin: 0 auto;
     margin-left: 88px;
 }
+/**** liste ****/
+.liste{
+	display: unset;
+}
+
+ul{
+	background-color: #0A79AE;
+	margin-top: 40px;
+	margin-right: 300px;
+	padding: 3px;
+	border-bottom-right-radius: 60px;
+	list-style: none;
+}
+li a{
+	color: white;
+	font-family: Nexa bold;
+	text-decoration: none;
+	padding: 15px;
+	font-size: 1.1rem;
+	background-color: #054674;
+	display: flex;
+	border-radius: 10px;
+	margin: 10px;
+	margin-right: 140px;
+	margin-left: 50px;
+	text-align: center;
+	
+
+}
+ul a:hover{
+	border: 3px solid white;
+	transition: all .2s ease;
 }
 </style>
